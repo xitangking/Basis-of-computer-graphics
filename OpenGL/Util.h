@@ -36,7 +36,7 @@ public:
 
 void init(void)
 {
-	glClearColor(1.0, 1.0, 1.0, 0.0);
+	glClearColor(0.0, 0.0, 0.0, 0.0);
 	glShadeModel(GL_FLAT);
 }
 
@@ -72,4 +72,10 @@ void glDrawLine(float x1,float y1,float x2,float y2,float a = 0,int size = 1)
 
 // 基本图形绘制 end
 
+inline void swap_vlaue(int* a, int * b)
+{
+	int temp = *a;
+	*a = *b;
+	*b = temp;
+}
 

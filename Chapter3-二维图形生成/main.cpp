@@ -13,14 +13,29 @@
 
 void display(void) {
 	glClear(GL_COLOR_BUFFER_BIT);
+
+	// draw line
+
 	/*
 	glColor3f(1.0, 0.0, 0.0);
 	glDrawLine(350.0, 480.0, 10.0, 10.0);//利用OpenGL函数绘制直线
 	glColor3f(0.0, 1.0, 0.0);
 	LineDDA(350.0, 480.0, 10.0, 10.0);//利用DDA算法绘制直线
-	*/
 	glColor3f(1, 0, 0);
+	LineMidP(350.0, 480.0, 10.0, 10.0);
+	glColor3f(0, 1, 0);
 	LineBres(350.0, 480.0, 10.0, 10.0);
+	glColor3f(0, 0, 1);
+	LinePPC(350.0, 480.0, 10.0, 10.0);
+	*/
+
+	// draw circle
+
+	glColor3f(1, 0, 0);
+	CircleBres(320, 240, 200);
+	glColor3f(0, 1, 0);
+	CircleMidP(320, 240, 200);
+
 	glFlush();
 }
 

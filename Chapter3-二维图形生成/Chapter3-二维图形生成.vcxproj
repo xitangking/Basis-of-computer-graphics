@@ -113,8 +113,11 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CircleMidP.h" />
+    <ClInclude Include="CricleBres.h" />
     <ClInclude Include="LineBresenham.h" />
     <ClInclude Include="LineDDA.h" />
+    <ClInclude Include="LineMidP.h" />
     <ClInclude Include="LinePPC.h" />
     <ClInclude Include="Test.h" />
   </ItemGroup>

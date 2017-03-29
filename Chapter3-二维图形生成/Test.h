@@ -7,9 +7,14 @@
 
 #pragma once
 
-#include<gl/glut.h>
+#include <gl/glut.h>
 
 // draw line
-#include"LineDDA.h"
+#include "LineDDA.h"
 #include "LinePPC.h"
 #include "LineBresenham.h"
+#include "LineMidP.h"
+
+// draw circle
+#include "CricleBres.h"
+#include "CircleMidP.h"

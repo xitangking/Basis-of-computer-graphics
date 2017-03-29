@@ -32,5 +32,14 @@
     <ClInclude Include="LineBresenham.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="LineMidP.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CricleBres.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CircleMidP.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
