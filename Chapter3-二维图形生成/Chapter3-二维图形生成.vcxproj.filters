@@ -41,5 +41,14 @@
     <ClInclude Include="CircleMidP.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Arc_OpenGL.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MyCricle.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="FloodFill.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

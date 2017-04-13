@@ -8,7 +8,11 @@
 #pragma once
 #include <gl/glut.h>
 
+/*+--+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
+// 常量
+/*+--+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
 
+#define PI 3.1415926
 
 /*+--+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
 // 类
@@ -25,6 +29,17 @@ public:
 		this->g = g;
 		this->b = b;
 	}
+
+	bool operator=(Color3f * color)
+	{
+		return color->r == r && color->g == g && color->b == b;
+	}
+
+
+	bool operator!=(Color3f * color)
+	{
+		return !(color->r == r && color->g == g && color->b == b);
+	}
 };
 
 
@@ -33,6 +48,16 @@ public:
 /*+--+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
 
 // 绘图初始化通用 begin
+
+double MAX(double l, double r)
+{
+	return l > r ? l : r;
+}
+
+double MIN(double l, double r)
+{
+	return l < r ? l : r;
+}
 
 void init(void)
 {
@@ -59,6 +84,13 @@ void setpixel(float x, float y, Color3f* color3_f = nullptr)
 	glBegin(GL_POINTS);
 	glVertex2f(x, y);
 	glEnd();
+}
+
+Color3f * getpixel(int x, int y)
+{
+	float color[3];
+	glReadPixels(x, y, 1, 1, GL_RGB, GL_FLOAT, color);
+	return new Color3f(color[0], color[1], color[2]);
 }
 
 void glDrawLine(float x1,float y1,float x2,float y2,float a = 0,int size = 1)

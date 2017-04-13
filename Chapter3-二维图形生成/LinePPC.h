@@ -11,7 +11,6 @@
 #include <windows.h> 
 #endif
 #include"../OpenGL/Util.h"
-#include<cmath>
 
 void LinePPC(int x1,int y1,int x2,int y2,Color3f* color = nullptr)
 {

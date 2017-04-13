@@ -8,6 +8,7 @@
 #pragma once
 
 #include "../OpenGL/Util.h"
+#include "CricleBres.h"
 
 // 通过一个点算出其映射的八个点
 //void Cirpot(int x0, int y0, int x, int y, Color3f* color = nullptr)

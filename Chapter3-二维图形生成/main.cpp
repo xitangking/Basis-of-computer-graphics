@@ -31,10 +31,21 @@ void display(void) {
 
 	// draw circle
 
+	//作业：实验一
 	glColor3f(1, 0, 0);
 	CircleBres(320, 240, 200);
-	glColor3f(0, 1, 0);
-	CircleMidP(320, 240, 200);
+
+	////glColor3f(0, 1, 0);
+	//CircleMidP(320, 240, 200);
+
+	//作业：实验二
+	//glColor3f(1, 0, 0);
+	//Arc_OpenGL(320, 240, 50, 0, 2 * PI);
+	//Arc_OpenGL(320, 240, 100, 0, 2 * PI);
+	//Arc_OpenGL(320, 240, 200, 0, 2 * PI);
+
+	//glColor3f(1, 1, 0);
+	//MyCricle(320, 240, 300, 200, 0, 2 * PI);
 
 	glFlush();
 }
@@ -46,7 +57,7 @@ int main(int argc, char* argv[])
 	glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);
 	glutInitWindowSize(640, 480);
 	glutInitWindowPosition(100, 100);
-	glutCreateWindow("绘制直线");
+	glutCreateWindow("绘制");
 	init();
 
 	glutReshapeFunc(reshape);

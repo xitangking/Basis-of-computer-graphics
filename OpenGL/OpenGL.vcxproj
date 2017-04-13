@@ -21,6 +21,12 @@
   <ItemGroup>
     <ClInclude Include="Util.h" />
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Chapter3-二维图形生成\map.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="D:\HenanCounty.txt" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{A542010A-C792-4D88-B740-71402C889677}</ProjectGuid>
     <RootNamespace>OpenGL</RootNamespace>

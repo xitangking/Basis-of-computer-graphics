@@ -18,3 +18,8 @@
 // draw circle
 #include "CricleBres.h"
 #include "CircleMidP.h"
+#include "Arc_OpenGL.h"
+#include "MyCricle.h"
+
+// range fill
+#include "FloodFill.h"

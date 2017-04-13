@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26014.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OpenGL", "OpenGL\OpenGL.vcxproj", "{A542010A-C792-4D88-B740-71402C889677}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Chapter3-二维图形生成", "Chapter3-二维图形生成\Chapter3-二维图形生成.vcxproj", "{97C75600-9C8D-468A-9DA7-B2EF5B550F67}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Chapter4 图形几何变换", "Chapter4 图形几何变换\Chapter4 图形几何变换.vcxproj", "{CB2C16C3-0B5D-4BB0-A6B9-E49D26083E10}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +33,14 @@ Global
 		{97C75600-9C8D-468A-9DA7-B2EF5B550F67}.Release|x64.Build.0 = Release|x64
 		{97C75600-9C8D-468A-9DA7-B2EF5B550F67}.Release|x86.ActiveCfg = Release|Win32
 		{97C75600-9C8D-468A-9DA7-B2EF5B550F67}.Release|x86.Build.0 = Release|Win32
+		{CB2C16C3-0B5D-4BB0-A6B9-E49D26083E10}.Debug|x64.ActiveCfg = Debug|x64
+		{CB2C16C3-0B5D-4BB0-A6B9-E49D26083E10}.Debug|x64.Build.0 = Debug|x64
+		{CB2C16C3-0B5D-4BB0-A6B9-E49D26083E10}.Debug|x86.ActiveCfg = Debug|Win32
+		{CB2C16C3-0B5D-4BB0-A6B9-E49D26083E10}.Debug|x86.Build.0 = Debug|Win32
+		{CB2C16C3-0B5D-4BB0-A6B9-E49D26083E10}.Release|x64.ActiveCfg = Release|x64
+		{CB2C16C3-0B5D-4BB0-A6B9-E49D26083E10}.Release|x64.Build.0 = Release|x64
+		{CB2C16C3-0B5D-4BB0-A6B9-E49D26083E10}.Release|x86.ActiveCfg = Release|Win32
+		{CB2C16C3-0B5D-4BB0-A6B9-E49D26083E10}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
