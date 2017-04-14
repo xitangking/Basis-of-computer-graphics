@@ -3,7 +3,8 @@
 * 丁酉鸡年三月 2017/3/29 11:26
 * @author 西唐王, xtwyzh@gmail.com, xtwroot.com
 * xtwroot Copyright (c) 2017. All rights reserved.
-******************************************************************************************/
+******************************************************************************************/\
+#define GL_DEBUG
 
 #if defined(_WIN32) || defined(WIN32)
 #include <windows.h> 
@@ -32,8 +33,8 @@ void display(void) {
 	// draw circle
 
 	//作业：实验一
-	glColor3f(1, 0, 0);
-	CircleBres(320, 240, 200);
+	//glColor3f(1, 0, 0);
+	//CircleBres(320, 240, 200);
 
 	////glColor3f(0, 1, 0);
 	//CircleMidP(320, 240, 200);
@@ -46,6 +47,14 @@ void display(void) {
 
 	//glColor3f(1, 1, 0);
 	//MyCricle(320, 240, 300, 200, 0, 2 * PI);
+	
+	// 种子填充
+	glColor3ub(255, 0, 0);
+	glDrawLine(100, 100, 100, 300);
+	glDrawLine(100, 300, 300, 300);
+	glDrawLine(300, 300, 300, 100);
+	glDrawLine(300, 100, 100, 100);
+	FloodFill_I(105, 105,new Color3ub(0,255,0),new Color3ub(255,0,0));
 
 	glFlush();
 }

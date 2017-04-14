@@ -32,13 +32,36 @@ public:
 
 	bool operator=(Color3f * color)
 	{
-		return color->r == r && color->g == g && color->b == b;
+		return color->r == r && color->g == g && color->b == b ;
 	}
-
 
 	bool operator!=(Color3f * color)
 	{
-		return !(color->r == r && color->g == g && color->b == b);
+		return !this->operator=(color);
+	}
+};
+
+class Color3ub
+{
+public:
+	int r, g, b;
+
+	Color3ub(int r, int g, int b)
+	{
+		this->r = r;
+		this->g = g;
+		this->b = b;
+	}
+
+	bool operator=(Color3ub * color)
+	{
+		int dis = 10; // 容差为10
+		return abs(color->r - r) <= dis && abs(color->g - g) <= dis && abs(color->b - b) <= dis;
+	}
+
+	bool operator!=(Color3ub * color)
+	{
+		return !this->operator=(color);
 	}
 };
 
@@ -84,13 +107,28 @@ void setpixel(float x, float y, Color3f* color3_f = nullptr)
 	glBegin(GL_POINTS);
 	glVertex2f(x, y);
 	glEnd();
+#ifdef GL_DEBUG
+	glFlush();
+#endif // GL_DEBUG
 }
 
-Color3f * getpixel(int x, int y)
+void setpixel_3ub(int x, int y, Color3ub* color3_ub = nullptr)
 {
-	float color[3];
-	glReadPixels(x, y, 1, 1, GL_RGB, GL_FLOAT, color);
-	return new Color3f(color[0], color[1], color[2]);
+	if (color3_ub != nullptr)
+		glColor3ub(color3_ub->r, color3_ub->g, color3_ub->b);
+	glBegin(GL_POINTS);
+	glVertex2f(x, y);
+	glEnd();
+#ifdef GL_DEBUG
+	glFlush();
+#endif // GL_DEBUG
+}
+
+Color3ub * getpixelcolor3ub(int x, int y)
+{
+	GLubyte color[3];
+	glReadPixels(x, y, 1, 1, GL_RGB, GL_UNSIGNED_BYTE, color);
+	return new Color3ub(color[0], color[1], color[2]);
 }
 
 void glDrawLine(float x1,float y1,float x2,float y2,float a = 0,int size = 1)
@@ -99,7 +137,10 @@ void glDrawLine(float x1,float y1,float x2,float y2,float a = 0,int size = 1)
 	glBegin(GL_LINES);
 	glVertex3f(x1, y1, a);
 	glVertex3f(x2, y2, a);
-	glEnd();
+	glEnd(); 
+#ifdef GL_DEBUG
+		glFlush();
+#endif // GL_DEBUG
 }
 
 // 基本图形绘制 end
