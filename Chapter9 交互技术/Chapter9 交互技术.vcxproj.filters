@@ -15,15 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Matrix.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="自由缩放实验.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="编程实例-三角形与矩阵变换.cpp">
+    <ClCompile Include="编程实例-图形拾取.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
